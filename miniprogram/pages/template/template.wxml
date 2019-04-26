@@ -1,0 +1,37 @@
+<template name="tabBar">
+  <view class="tabBar">
+    <navigator open-type="redirect" url="{{frigerator.url}}">
+      <view class="tabBar-item" style='float: left;'>
+        <view class="container">
+          <image src="{{left ? frigerator.selected : frigerator.img}}"></image>
+          <view class='title'>冰箱</view>
+        </view>
+      </view>
+    </navigator>
+    <view class="tabBar-item" style='float:left; width: 30%;'></view>
+    <navigator open-type="redirect" url="{{recipe.url}}">
+      <view class="tabBar-item" style='float: right'>
+        <view class="container">
+          <image src="{{right ? recipe.selected : recipe.img}}"></image>
+          <view class='title'>菜谱</view>
+        </view>
+      </view>
+    </navigator>
+    <navigator open-type="redirect" url="/pages/index/index">
+      <view class="photo">
+        <image src="/images/icon_photo.png"></image>
+      </view>
+    </navigator>
+  </view>
+</template>
+
+<template name="topView">
+  <view class="topView">
+    <view class="title">
+      {{title}}
+    </view>
+    <view class="avatar">
+      <image src="/images/avatar.png"></image>
+    </view>
+  </view>
+</template>

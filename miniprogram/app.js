@@ -1,15 +1,18 @@
 //app.js
 App({
-  onLaunch: function () {
-    
-    if (!wx.cloud) {
-      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-    } else {
-      wx.cloud.init({
-        traceUser: true,
-      })
+  data: {
+    frigerator: {
+      img: '/images/tab_icon_frigerator_normal.png',
+      selected: '/images/tab_icon_frigerator_selected.png',
+      url: '/pages/index/index'
+    },
+    recipe: {
+      img: '/images/tab_icon_recipe_normal.png',
+      selected: '/images/tab_icon_recipe_selected.png',
+      url: '/pages/index/index'
     }
+  },
+  onLaunch: function () {
 
-    this.globalData = {}
   }
 })
