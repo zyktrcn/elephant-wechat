@@ -1,1 +1,9 @@
-@import "../template/template.wxss"
+@import "../template/template.wxss";
+
+.food {
+  margin: 160rpx 0 0 32rpx;
+}
+
+.scroller {
+  margin-top: 32rpx;
+}

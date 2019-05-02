@@ -35,3 +35,12 @@
     </view>
   </view>
 </template>
+
+<template name="item">
+  <view class="item {{color}}">
+    <view>
+      <image src="{{image}}" style="width: {{width}}rpx; height: {{height}}rpx"></image>
+      <view class="name">{{name}}</view>
+    </view>
+  </view>
+</template>

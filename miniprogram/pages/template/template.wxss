@@ -69,3 +69,34 @@
   height: 88rpx;
   border-radius: 50%;
 }
+
+.item {
+  width: 192rpx;
+  height: 192rpx;
+  margin-right: 32rpx;
+  border-radius: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .name {
+  text-align: center;
+  font-size: 20rpx;
+}
+
+.yellow {
+  background: #FBF2B3;
+}
+.yellow-bright {
+  background: #FFED84;
+}
+.pink {
+  background: #FCE4DB;
+}
+.green {
+  background: #E9EFBE;
+}
+.orange {
+  background: #FFB882;
+}
