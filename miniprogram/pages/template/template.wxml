@@ -36,11 +36,30 @@
   </view>
 </template>
 
-<template name="item">
-  <view class="item {{color}}">
+<template name="food-item">
+  <view class="food-item {{color}}">
     <view>
       <image src="{{image}}" style="width: {{width}}rpx; height: {{height}}rpx"></image>
       <view class="name">{{name}}</view>
+    </view>
+  </view>
+</template>
+
+<template name="dish-item">
+  <view class="dish-item">
+    <image class="bg" src="{{image}}"></image>
+    <view class="front">
+      <view class="name">{{name}}</view>
+      <view class="info">
+        <view class="left">
+          <image src="/images/fire_icon.png"></image>
+          <view>烹饪难度：{{dificulty}}</view>
+        </view>
+        <view class="right">
+          <image src="/images/time_icon.png"></image>
+          <view>预计用时：{{time}}min</view>
+        </view>
+      </view>
     </view>
   </view>
 </template>

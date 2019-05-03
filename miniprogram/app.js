@@ -9,7 +9,7 @@ App({
     recipe: {
       img: '/images/tab_icon_recipe_normal.png',
       selected: '/images/tab_icon_recipe_selected.png',
-      url: '/pages/index/index'
+      url: '/pages/dish/dish'
     }
   },
   onLaunch: function () {

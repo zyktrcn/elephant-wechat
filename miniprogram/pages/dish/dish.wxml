@@ -1,0 +1,16 @@
+<view>
+  <template is="topView" data="{{title: '我的食谱'}}" />
+  <template is="tabBar" data="{{left: 0, right: 1, frigerator, recipe}}"/>
+
+  <view class="top"></view>
+
+  <view class="scroller">
+    <scroll-view scroll-x="true" style="white-space: nowrap">
+      <view style="width: {{dishes.length * 614}}rpx;display: flex;">
+        <template is="dish-item" wx:for="{{dishes}}" wx:key="index" data="{{name: item.name, image: item.image, difficulty: item.difficulty, time: item.time}}"></template>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<import src="/pages/template/template" />

@@ -4,10 +4,6 @@
   height: 88rpx;
 }
 
-.food {
-  margin: 72rpx 0 0 32rpx;
-}
-
 .scroller {
-  margin-top: 32rpx;
+  margin-top: 72rpx;
 }

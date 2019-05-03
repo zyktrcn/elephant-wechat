@@ -2,17 +2,25 @@
   <template is="topView" data="{{title: '我的冰箱'}}" />
   <template is="tabBar" data="{{left: 1, right: 0, frigerator, recipe}}"/>
 
+  <view class="top"></view>
+
   <view class="food">
     <view class="title">肉类</view>
     <view class="scroller">
       <scroll-view scroll-x="true" style="white-space: nowrap">
-        <view style="width: {{6*192+5*32}}rpx;display: flex;">
-          <template is="item" data="{{color: 'yellow', image: '/images/chicken.png', name: '鸡肉', width: '104', height: '56'}}" />
-          <template is="item" data="{{color: 'pink', image: '/images/peach.png', name: '桃子', width: '104', height: '80'}}" />
-          <template is="item" data="{{color: 'yellow', image: '/images/chicken.png', name: '鸡肉', width: '104', height: '56'}}" />
-          <template is="item" data="{{color: 'pink', image: '/images/peach.png', name: '桃子', width: '104', height: '80'}}" />
-          <template is="item" data="{{color: 'yellow', image: '/images/chicken.png', name: '鸡肉', width: '104', height: '56'}}" />
-          <template is="item" data="{{color: 'pink', image: '/images/peach.png', name: '桃子', width: '104', height: '80'}}" />
+        <view style="width: {{foods.length * 224 - 32}}rpx;display: flex;">
+          <template is="food-item" wx:for="{{foods}}" wx:key="index" data="{{color: item.color, image: item.image, name: item.name, width: item.width, height: item.height}}" />
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="food">
+    <view class="title">蔬菜</view>
+    <view class="scroller">
+      <scroll-view scroll-x="true" style="white-space: nowrap">
+        <view style="width: {{foods.length * 224 - 32}}rpx;display: flex;">
+          <template is="food-item" wx:for="{{foods}}" wx:key="index" data="{{color: item.color, image: item.image, name: item.name, width: item.width, height: item.height}}" />
         </view>
       </scroll-view>
     </view>
