@@ -1,0 +1,136 @@
+
+
+.banner {
+  position: relative;
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.banner image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.banner .title {
+  position: absolute;
+  left: 32rpx;
+  bottom: 56rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: white;
+  z-index: 3;
+}
+
+.steps {
+  padding: 32rpx;
+}
+
+.steps .title {
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.steps .material {
+  margin: 20rpx 40rpx;
+}
+
+.material > view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx 0;
+  text-align: left;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 28rpx;
+}
+
+.material > view > view:last-child {
+  width: 180rpx;
+}
+
+.steps .step {
+  margin: 20rpx;
+}
+
+.steps .step .title {
+  padding: 20rpx 0;
+}
+
+.steps .step image {
+  width: 100%;
+}
+
+.steps .step .des {
+  margin: 20rpx 0;
+  font-size: 30rpx;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.btn {
+  margin: 32rpx;
+  height: 80rpx;
+  border-radius: 32rpx;
+  background: #90DEFF;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.foods {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  padding: 32rpx 32rpx 0 32rpx;
+  border-top-left-radius: 72rpx;
+  border-top-right-radius: 72rpx;
+  box-shadow: 0 -3px 10px #EDEDED;
+  background: white;
+  z-index: 5;
+}
+
+.foods .scroller {
+  height: 448rpx;
+  overflow: hidden;
+}
+
+.foods .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 192rpx;
+  margin: 0 0 32rpx;
+}
+
+.foods .item button {
+  width: 160rpx;
+  height: 80rpx;
+  margin-right: 0;
+  border-radius: 44rpx;
+  color: white;
+  background: #90DEFF;
+  font-size: 32rpx;
+}

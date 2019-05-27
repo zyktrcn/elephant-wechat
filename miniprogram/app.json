@@ -1,13 +1,35 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/dish/dish"
+    "pages/item/item",
+    "pages/choose/choose",
+    "pages/photo/photo",
+    "pages/detail/detail",
+    "pages/dish/dish",
+    "pages/profile/profile",
+    "pages/result/result"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "冰箱",
+        "iconPath": "images/tab_icon_frigerator_normal copy.png",
+        "selectedIconPath": "images/tab_icon_frigerator_selected copy.png"
+      },
+      {
+        "pagePath": "pages/dish/dish",
+        "text": "菜谱",
+        "iconPath": "images/tab_icon_recipe_normal copy.png",
+        "selectedIconPath": "images/tab_icon_recipe_selected copy.png"
+      }
+    ]
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "大象小冰箱"
   }
 }

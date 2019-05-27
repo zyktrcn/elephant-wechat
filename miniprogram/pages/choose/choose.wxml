@@ -1,0 +1,30 @@
+<view>
+  <view class="banner">
+    <view style="font-size: 48rpx;">真棒！</view>
+    <view style="font-size: 32rpx;">你已经完成了这道菜</view>
+    <image src="{{dish.image}}" mode="widthFix"></image>
+    <view class="des">
+      <view></view>
+      <view>下面的食材用完了吗？</view>
+      <view></view>
+    </view>
+    <!-- <image src="{{dish.image}}" mode="aspectFit"></image>
+    <view class="mask"></view>
+    <view class="title">{{dish.name}}</view> -->
+  </view>
+  <view class="foods" style="height: {{scrollerHeight}}rpx;">
+    <scroll-view scroll-y style="height: {{scrollerHeight}}rpx;">
+      <!-- <view class="item" wx:for="{{foods}}" wx:key="index">
+        <template is="food-item" data="{{color: item.color, image: item.image, name: item.name}}" />
+        <button class="{{item.reset ? '' : 'disable'}}" disabled='{{!item.reset}}' data-index="{{index}}" bindtap='finish'>用完了</button>
+      </view> -->
+      <view style="font-size: 28rpx; color: grey;">请把已消耗完毕的食材点掉</view>
+      <view class="item" wx:for="{{foods}}" wx:key="index" bindtap="finish" data-index="{{index}}">
+        <template is="food-item" data="{{ name: item.name, image: item.image, color: item.reset ? item.color : 'grey' }}" />
+      </view>
+    </scroll-view>
+  </view>
+  <button class="btn" bindtap='goDish'>已消耗食材</button>
+</view>
+
+<import src="/pages/template/template" />

@@ -1,16 +1,18 @@
-<view>
-  <template is="topView" data="{{title: '我的食谱'}}" />
+<view class="page">
+  <template is="topView" data="{{title: '我的食谱', time: template.time}}" />
   <template is="tabBar" data="{{left: 0, right: 1, frigerator, recipe}}"/>
-
-  <view class="top"></view>
 
   <view class="scroller">
     <scroll-view scroll-x="true" style="white-space: nowrap">
-      <view style="width: {{dishes.length * 614}}rpx;display: flex;">
-        <template is="dish-item" wx:for="{{dishes}}" wx:key="index" data="{{name: item.name, image: item.image, difficulty: item.difficulty, time: item.time}}"></template>
+      <view style="width: {{dishes.length * 579}}rpx;display: flex;">
+        <navigator url="/pages/detail/detail?index={{index}}" wx:for="{{dishes}}" wx:key="index">
+          <template is="dish-item" data="{{name: item.name, image: item.image, difficulty: item.difficulty, time: item.time}}"></template>
+        </navigator>
       </view>
     </scroll-view>
   </view>
+
+  <view class="quotation">“不要因为你自己没有胃口而去责备你的食物。” ——（印度作家）泰戈尔</view>
 </view>
 
 <import src="/pages/template/template" />

@@ -1,0 +1,19 @@
+<view class="container">
+  <image class='banner' src="/images/scan_bg.png"></image>
+  <view class="result">
+    <view>扫描结果</view>
+    <view class="scroller">
+      <scroll-view scroll-y style="height: 380rpx; font-size: 0;">
+        <view class="item" bindtap='goAdd'>
+          <template is="food-item" data="{{image: manual.image, name: manual.name, color: manual.color}}" />
+        </view>
+        <view class="item" wx:for="{{foods}}" wx:key="index">
+          <template is="food-item" data="{{color: item.color, image: item.image, name: item.name}}" />
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <button class="btn">放进冰箱</button>
+</view>
+
+<import src="/pages/template/template" />

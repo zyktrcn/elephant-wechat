@@ -1,0 +1,114 @@
+@import "../template/template.wxss";
+
+.banner {
+  position: relative;
+  margin: 0 32rpx;
+  height: 500rpx;
+  overflow: hidden;
+}
+
+.banner > view {
+  margin: 20rpx 0;
+}
+
+.banner image {
+  width: 100%;
+}
+
+.banner .des {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.banner .des > view {
+  color: #D8D8D8;
+}
+
+.banner .des > view:first-child, .banner .des > view:last-child {
+  width: 160rpx;
+  height: 4rpx;
+  background: #D8D8D8;
+}
+
+/* .banner image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.banner .title {
+  position: absolute;
+  left: 32rpx;
+  bottom: 56rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: white;
+  z-index: 3;
+} */
+
+.foods {
+  overflow: hidden;
+  padding: 32rpx 0 0 32rpx;
+}
+
+.foods .item {
+  display: inline-flex;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 0;
+  vertical-align: top;
+}
+
+/* .foods .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 192rpx;
+  margin: 0 0 32rpx;
+}
+
+.foods .item button {
+  width: 160rpx;
+  height: 80rpx;
+  margin-right: 0;
+  border-radius: 44rpx;
+  color: white;
+  background: #90DEFF;
+  font-size: 32rpx;
+}
+
+.foods .item .disable {
+  background: #D8D8D8;
+} */
+
+.btn {
+  margin: 32rpx;
+  height: 80rpx;
+  border-radius: 32rpx;
+  background: #90DEFF;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+}

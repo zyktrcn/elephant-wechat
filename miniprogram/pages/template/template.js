@@ -1,66 +1,12 @@
-// miniprogram/pages/template/template.js
-Page({
+function getTime() {
+  const hour = new Date().getHours()
+  const timeStr = hour < 12 ? '早上' : hour < 18 ? '下午' : '晚上'
+  const timing = hour >= 6 && hour < 10 ? '早饭' : hour >= 12 && hour < 14 ? '午饭' : hour >= 5 && hour < 8 ? '晚饭' : ''
+  return {timeStr, timing}
+}
 
-  /**
-   * Page initial data
-   */
-  data: {
-    
-  },
+const template = {
+  time: getTime()
+}
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+export default template

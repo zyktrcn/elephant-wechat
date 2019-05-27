@@ -1,0 +1,28 @@
+<view>
+  <view class='camera'  style="width: 100%; height: {{height}}rpx;">
+    <camera style="width: 100%; height: {{height}}rpx;" wx:if="{{!photo}}">
+      <cover-view class="options">
+        <cover-view class="album">相册</cover-view>
+        <cover-view class="take">
+          <cover-view class="border" wx:if="{{cameraOpen}}">
+            <cover-view class="circle" bindtap='takePhoto'></cover-view>
+          </cover-view>
+          <!-- <cover-view class="confirm" wx:if="{{!cameraOpen}}" bindtap='confirm'>确定</cover-view> -->
+        </cover-view>
+        <cover-view class="reset" bindtap='reset'>重拍</cover-view>
+      </cover-view>
+    </camera>
+    <image src="{{photo}}" wx:if="{{photo}}">
+      <view class="options">
+        <view class="album">相册</view>
+        <view class="take">
+          <!-- <view class="border" wx:if="{{cameraOpen}}">
+            <view class="circle" bindtap='takePhoto'></view>
+          </view> -->
+          <view class="confirm" wx:if="{{!cameraOpen}}" bindtap='confirm'>确定</view>
+        </view>
+        <view class="reset" bindtap='reset'>重拍</view>
+      </view>
+    </image>
+  </view>
+</view>

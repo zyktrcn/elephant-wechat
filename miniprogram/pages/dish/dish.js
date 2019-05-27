@@ -1,4 +1,5 @@
 // miniprogram/pages/dish/dish.js
+import template from '../template/template'
 const app = getApp()
 
 Page({
@@ -9,26 +10,8 @@ Page({
   data: {
     frigerator: {},
     recipe: {},
-    dishes: [
-      {
-        name: '奶香西兰花鸡胸意面',
-        image: '/images/dish_bg.png',
-        difficulty: '简单',
-        time: 30
-      },
-      {
-        name: '奶香西兰花鸡胸意面',
-        image: '/images/dish_bg.png',
-        difficulty: '简单',
-        time: 30
-      },
-      {
-        name: '奶香西兰花鸡胸意面',
-        image: '/images/dish_bg.png',
-        difficulty: '简单',
-        time: 30
-      }
-    ]
+    dishes: [],
+    template: template
   },
 
   /**
@@ -36,11 +19,12 @@ Page({
    */
   onLoad: function (options) {
     // set tabBar
-    let frigerator = app.data.frigerator
-    let recipe = app.data.recipe
     this.setData({
-      frigerator,
-      recipe
+      frigerator: app.data.frigerator,
+      recipe: app.data.recipe,
+      dishes: app.data.dishes
     })
+
+    wx.hideTabBar()
   }
 })

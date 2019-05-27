@@ -1,13 +1,48 @@
 @import "../template/template.wxss";
 
-.top {
-  height: 88rpx;
+.tags {
+  margin-top: 24rpx;
+  margin-left: 40rpx;
 }
 
 .food {
-  margin: 72rpx 0 0 32rpx;
+  margin-top: 52rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  box-shadow: 0 -1px 6px rgba(195, 195, 195, 0.3);
 }
 
-.scroller {
-  margin-top: 32rpx;
+.food .tab {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40rpx;
+  border-bottom: 1px solid rgba(195, 195, 195, 0.3);
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #777b82;
+}
+
+.tab .sel {
+  color: #222633;
+}
+
+.tab view {
+  padding: 0 45rpx;
+}
+
+.items {
+  margin: 14rpx 20rpx 14rpx 40rpx;
+}
+
+.items .item {
+  display: inline-flex;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.items, .meatPage, .fruitPage, .vegetablePage {
+  overflow: hidden;
 }

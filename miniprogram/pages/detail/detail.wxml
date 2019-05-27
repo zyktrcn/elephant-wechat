@@ -1,0 +1,27 @@
+<view>
+  <view class="scroller" style="height: {{scrollerHeight}}rpx">
+    <scroll-view scroll-y style="height: {{scrollerHeight}}rpx">
+      <view class="banner">
+        <image src="{{dish.image}}" mode="aspectFit"></image>
+        <view class="mask"></view>
+        <view class="title">{{dish.name}}</view>
+      </view>
+      <view class="steps">
+        <view style="margin: 30rpx 0;">烹饪步骤</view>
+        <view class="material">
+          <view class="title">用料</view>
+          <view wx:for="{{material}}" wx:key="index">
+            <view>{{item.name}}</view>
+            <view>{{item.count}}</view>
+          </view>
+        </view>
+        <view class="step" wx:for="{{steps}}" wx:key="index">
+          <view class="title">{{item.title}}</view>
+          <image src="{{item.img}}" mode="widthFix"></image>
+          <view class="des">{{item.des}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <button class="btn" bindtap="choose">决定享用</button>
+</view>

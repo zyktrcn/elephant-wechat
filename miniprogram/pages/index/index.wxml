@@ -1,30 +1,46 @@
-<view>
-  <template is="topView" data="{{title: '我的冰箱'}}" />
+<view class="page">
+  <template is="topView" data="{{title: '我的冰箱', name: 'zyktrcn', time: template.time}}" />
+  <view class="tags">
+    <template is="tag" data="{{tag: tag}}"/>
+  </view>
   <template is="tabBar" data="{{left: 1, right: 0, frigerator, recipe}}"/>
 
-  <view class="top"></view>
-
+  <!-- food -->
   <view class="food">
-    <view class="title">肉类</view>
-    <view class="scroller">
-      <scroll-view scroll-x="true" style="white-space: nowrap">
-        <view style="width: {{foods.length * 224 - 32}}rpx;display: flex;">
-          <template is="food-item" wx:for="{{foods}}" wx:key="index" data="{{color: item.color, image: item.image, name: item.name, width: item.width, height: item.height}}" />
-        </view>
-      </scroll-view>
+    <view class="tab">
+      <view wx:for="{{category}}" wx:key="index" class="{{sel === item.name ? 'sel' : ''}}" bindtap="selectTab" data-sel="{{item.name}}">{{item.title}}</view>
+    </view>
+    <view class="items">
+      <view class="meatPage" style="height: {{pageMaxHeight}}rpx" wx:if="{{sel === 'meat'}}">
+        <scroll-view scroll-y style="height: {{pageMaxHeight}}rpx">
+          <view class="item" wx:for="{{meat}}" wx:key="index" >
+            <navigator url="/pages/item/item?index={{index}}">
+            <template is="food-item" data="{{ name: item.name, image: item.image, color: item.color }}" />
+          </navigator>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="fruitPage" style="height: {{pageMaxHeight}}rpx" wx:if="{{sel === 'fruit'}}">
+        <scroll-view scroll-y style="height: {{pageMaxHeight}}rpx">
+          <view class="item" wx:for="{{fruit}}" wx:key="index" >
+            <navigator url="/pages/item/item?index={{index}}">
+            <template is="food-item" data="{{ name: item.name, image: item.image, color: item.color }}" />
+          </navigator>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="vegetablePage" style="height: {{pageMaxHeight}}rpx" wx:if="{{sel === 'vegetable'}}">
+        <scroll-view scroll-y style="height: {{pageMaxHeight}}rpx">
+          <view class="item" wx:for="{{vegetable}}" wx:key="index" >
+            <navigator url="/pages/item/item?index={{index}}">
+              <template is="food-item" data="{{ name: item.name, image: item.image, color: item.color }}" />
+            </navigator>
+          </view>
+        </scroll-view>
+      </view>
     </view>
   </view>
 
-  <view class="food">
-    <view class="title">蔬菜</view>
-    <view class="scroller">
-      <scroll-view scroll-x="true" style="white-space: nowrap">
-        <view style="width: {{foods.length * 224 - 32}}rpx;display: flex;">
-          <template is="food-item" wx:for="{{foods}}" wx:key="index" data="{{color: item.color, image: item.image, name: item.name, width: item.width, height: item.height}}" />
-        </view>
-      </scroll-view>
-    </view>
-  </view>
 </view>
 
 <import src="/pages/template/template" />

@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="food">
+    <view>
+      <template is="food-item" data="{{ image: food.image, color: food.color }}" />
+    </view>
+    <view class="info">
+      <view class="title">{{food.name}}</view>
+      <view class="content" wx:for="{{food.tag}}" wx:key="index">
+        <view>{{item.title}}</view>
+        <view style="width: {{item.count * 15}}rpx" class="{{item.category}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">
+      <view></view>
+      <view>加入冰箱日期</view>
+    </view>
+    <view class="data" style="height: 100px;">
+
+    </view>
+    <view class="title">
+      <view></view>
+      <view>存放建议</view>
+    </view>
+    <view class="data">
+      {{food.advice}}
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">
+      <view></view>
+      <view>推荐菜式</view>
+    </view>
+    <view class="data" style="padding: 0;">
+      <navigator url="/pages/detail/detail?index={{index}}" wx:for="{{food.relate}}" wx:key="index">
+        <template is="relatedDish" data="{{name: item.name, image: item.image}}"></template>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<import src="/pages/template/template" />

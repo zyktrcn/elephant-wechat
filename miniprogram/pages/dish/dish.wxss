@@ -1,9 +1,11 @@
 @import "../template/template.wxss";
 
-.top {
-  height: 88rpx;
+.scroller {
+  margin-top: 40rpx;
 }
 
-.scroller {
-  margin-top: 72rpx;
+.quotation {
+  margin: 20rpx;
+  color: #999999;
+  font-size: 24rpx;
 }

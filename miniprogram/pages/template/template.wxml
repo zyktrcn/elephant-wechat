@@ -1,6 +1,6 @@
 <template name="tabBar">
   <view class="tabBar">
-    <navigator open-type="redirect" url="{{frigerator.url}}">
+    <navigator open-type="switchTab" url="{{frigerator.url}}">
       <view class="tabBar-item" style='float: left;'>
         <view class="container">
           <image src="{{left ? frigerator.selected : frigerator.img}}"></image>
@@ -9,7 +9,7 @@
       </view>
     </navigator>
     <view class="tabBar-item" style='float:left; width: 30%;'></view>
-    <navigator open-type="redirect" url="{{recipe.url}}">
+    <navigator open-type="switchTab" url="{{recipe.url}}">
       <view class="tabBar-item" style='float: right'>
         <view class="container">
           <image src="{{right ? recipe.selected : recipe.img}}"></image>
@@ -17,7 +17,7 @@
         </view>
       </view>
     </navigator>
-    <navigator open-type="redirect" url="/pages/index/index">
+    <navigator open-type="navigate" url="/pages/photo/photo">
       <view class="photo">
         <image src="/images/icon_photo.png"></image>
       </view>
@@ -25,21 +25,43 @@
   </view>
 </template>
 
+<!-- top view -->
 <template name="topView">
   <view class="topView">
-    <view class="title">
-      {{title}}
+    <view class="info">
+      <view>
+        <view class="title">{{title}}</view>
+        <view wx:if="{{name}}">Hi, {{name}}</view>
+        <view>{{time.timeStr}}好!</view>
+        <view wx:if="{{!time.name && time.timing}}">现在是{{timing}}时间哦</view>
+      </view>
+      <navigator open-type="navigate" url="/pages/profile/profile">
+        <view class="avatar">
+          <image src="/images/avatar.png"></image>
+        </view>
+      </navigator>
     </view>
-    <view class="avatar">
-      <image src="/images/avatar.png"></image>
-    </view>
+  </view>
+</template>
+
+<!-- tag -->
+<template name="tag">
+  <view class="tag" wx:if="{{tag.length}}">
+    <view class="{{item.category}}" wx:for="{{tag}}" wx:key="index">{{item.name}}</view>
+  </view>
+</template>
+
+<template name="back">
+  <view class="topBack">
+    <image src="/images/back.png"></image>
+    <view>返回</view>
   </view>
 </template>
 
 <template name="food-item">
   <view class="food-item {{color}}">
     <view>
-      <image src="{{image}}" style="width: {{width}}rpx; height: {{height}}rpx"></image>
+      <image src="{{image}}" mode="widthFix"></image>
       <view class="name">{{name}}</view>
     </view>
   </view>
@@ -61,5 +83,13 @@
         </view>
       </view>
     </view>
+  </view>
+</template>
+
+<template name="relatedDish">
+  <view class="relate">
+    <image class="bg" src="{{image}}" mode="widthFix">
+      <view class="name">{{name}}</view>
+    </image>
   </view>
 </template>

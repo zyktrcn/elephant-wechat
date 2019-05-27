@@ -1,0 +1,98 @@
+@import "../template/template.wxss";
+
+.page {
+  margin: 0 40rpx;
+  padding: 40rpx 0;
+}
+
+.food {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.food > view {
+  height: 176rpx;
+  margin-right: 40rpx;
+}
+
+.food .food-item {
+  width: 176rpx;
+  height: 176rpx;
+}
+
+.food image {
+  width: 114rpx;
+}
+
+.food .info .title {
+  font-size: 34rpx;
+  text-align: left;
+  font-weight: bold;
+}
+
+.food .info .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  margin: 10rpx 0;
+}
+
+.food .info .content view {
+  margin-right: 10rpx;
+}
+
+.food .info .content view:last-child {
+  height: 15rpx;
+  border-radius: 20px;
+}
+
+.protein {
+  background: #fdd60c;
+}
+
+.fat {
+  background: #fcb788;
+}
+
+.sugar {
+  background: #c4db61;
+}
+
+.item {
+  background: white;
+  margin: 40rpx 0;
+  padding: 30rpx 40rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 6px rgba(195, 195, 195, 0.3);
+}
+
+.item .title {
+  height: 55rpx;
+  line-height: 55rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #e3e5e4;
+  font-size: 32rpx;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.item .title view:first-child {
+  background: #73ddda;
+  width: 10rpx;
+  height: 26rpx;
+  margin-right: 15rpx;
+  border-radius: 20%;
+}
+
+.item .data {
+  font-size: 28rpx;
+  padding: 20rpx;
+}
+
+.item .data .relate {
+  width: 100%;
+}
